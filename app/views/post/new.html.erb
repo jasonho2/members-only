@@ -1,0 +1,21 @@
+<%= form_with model: @post do |form| %>
+  <% if @post.errors.any? %>
+    <h3>
+      <%= @post.errors.count %>
+      errors prohibited this post from being saved:
+    </h3>
+    <ol>
+      <% @post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ol>
+  <% end %>
+
+  <div><%= form.label :title %></div>
+  <%= form.text_field :title %>
+
+  <div><%= form.label :content %></div>
+  <%= form.text_area :content, placeholder: "Enter your content..." %><br>
+
+  <%= form.submit "Create post" %>
+<% end %>
