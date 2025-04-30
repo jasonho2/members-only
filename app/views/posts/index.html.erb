@@ -2,19 +2,19 @@
 
   <h1>Welcome to the Clubhouse</h1>
 
-  <div class="header-buttons">
+  <div class="header-button-container">
 
-    <%= button_to "Create Post", new_post_path, method: :get %>
+    <%= button_to "Create Post", new_post_path, method: :get, class: "header-button" %>
 
     <% if user_signed_in? %>
       <%= button_to "Log out",
       destroy_user_session_path,
-      method: "delete",
+      method: "delete", class: "header-button",
       data: {
         turbo: "false",
       } %>
     <% else %>
-      <%= button_to "Log in", new_user_session_path, method: :get %>
+      <%= button_to "Log in", new_user_session_path, method: :get, class: "header-button" %>
     <% end %>
 
   </div>

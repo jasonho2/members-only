@@ -1,12 +1,12 @@
 <div class="header-bar">
   <h1>New Post</h1>
 
-  <div class="header-buttons">
-    <%= button_to "Back to Posts", posts_path, method: :get %>
+  <div class="header-button-container">
+    <%= button_to "Back to Posts", posts_path, method: :get, class: "header-button" %>
     <% if user_signed_in? %>
-      <%= button_to "Log out", destroy_user_session_path, method: :delete, data: { turbo: "false" } %>
+      <%= button_to "Log out", destroy_user_session_path, method: :delete, class: "header-button", data: { turbo: "false" } %>
     <% else %>
-      <%= button_to "Log in", new_user_session_path, method: :get %>
+      <%= button_to "Log in", new_user_session_path, method: :get, class: "header-button" %>
     <% end %>
   </div>
 </div>
