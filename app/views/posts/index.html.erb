@@ -32,11 +32,9 @@
         <p class="card-description"><%= post.content %></p>
       </article>
 
-      <% if user_signed_in? %>
-        <h4 class="post-author">
-          <%= post.user&.email || "Anonymous" %>
-        </h4>
-      <% end %>
+      <h4 class="post-author">
+        <%= user_signed_in? ? post.user.email : "Anonymous" %>
+      </h4>
 
     </div>
 
