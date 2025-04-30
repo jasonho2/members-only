@@ -124,3 +124,38 @@
 .btn:hover {
   background-color: rgb(0, 191, 255);
 }
+
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.auth-form {
+  background-color: var(--primary-background-color);
+  border: solid 1px var(--card-border-color);
+  padding: 30px 40px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.auth-links {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.auth-links a {
+  color: var(--primary-blue);
+  text-decoration: none;
+}
+
+.auth-links a:hover {
+  text-decoration: underline;
+}
