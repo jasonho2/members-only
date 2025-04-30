@@ -61,7 +61,7 @@
   border: solid 1px var(--card-border-color);
   padding: 10px 40px;
   flex-grow: 1;
-  width: 500px;
+  width: 350px;
 }
 
 .post-author {
@@ -69,6 +69,12 @@
   font-style: italic;
   border-top: solid 1px var(--card-border-color);
   padding-top: 10px;
+}
+
+.new-post-card {
+  background-color: var(--primary-background-color);
+  border: solid 1px var(--card-border-color);
+  padding: 10px 40px;
 }
 
 .form-control {
