@@ -9,11 +9,16 @@
  * Consider organizing styles into separate files for maintainability.
  */
  
+ :root {
+  --primary-blue: #26a7de;
+  --primary-background-color: #eeeeee;
+ }
+
  .header-bar {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
-  background-color: #26a7de;
+  background-color: var(--primary-blue);
   color: white;
   margin-bottom: 20px;
 }
@@ -36,7 +41,7 @@
   font-size: 1rem;
   border: none;
   border-radius: 4px;
-  background-color: #e6e6e6;
+  background-color: var(--primary-background-color);
   cursor: pointer;
 }
 
@@ -47,7 +52,7 @@
 }
 
 .post-card {
-  background-color: #e6e6e6;
+  background-color: var(--primary-background-color);
   border: solid 1px #000;
   padding: 10px 40px;
   flex-grow: 1;
@@ -67,7 +72,7 @@
   font-size: 1rem;
   margin-top: 4px;
   margin-bottom: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--primary-background-color);
   border-radius: 4px;
 }
 
@@ -76,7 +81,7 @@
   height: 200px;
   padding: 8px;
   font-size: 1rem;
-  border: 1px solid #ccc;
+  border: 1px solid var(--primary-background-color);
   border-radius: 4px;
   resize: vertical;
 }
@@ -86,7 +91,7 @@
   font-size: 1rem;
   border: none;
   border-radius: 4px;
-  background-color: #26a7de;
+  background-color: var(--primary-blue);
   color: white;
   cursor: pointer;
   margin: 10px 0px 10px 0px;
