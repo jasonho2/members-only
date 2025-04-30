@@ -57,6 +57,9 @@
 }
 
 .post-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: var(--primary-background-color);
   border: solid 1px var(--card-border-color);
   padding: 10px 40px;
@@ -69,6 +72,15 @@
   font-style: italic;
   border-top: solid 1px var(--card-border-color);
   padding-top: 10px;
+}
+
+.card-description {
+  overflow: scroll;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
 }
 
 .new-post-card {
