@@ -36,6 +36,10 @@
         <%= user_signed_in? ? post.user.email : "Anonymous" %>
       </h4>
 
+      <% if user_signed_in? && current_user == post.user %>
+        <%= button_to "Delete", post_path(post), method: :delete, data: { confirm: "Are you sure?" }, class: "btn delete-btn" %>
+      <% end %>
+
     </div>
 
   <% end %>

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   root "posts#index"
 
-  resources :posts, only: [ :index, :new, :create ]
+  resources :posts, only: [ :index, :new, :create, :destroy  ]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
