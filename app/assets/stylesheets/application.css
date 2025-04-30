@@ -48,7 +48,7 @@
 
 .post-card {
   background-color: #e6e6e6;
-  border: solid 2px #000;
+  border: solid 1px #000;
   padding: 10px 40px;
   flex-grow: 1;
   width: 500px;
@@ -57,7 +57,7 @@
 .post-author {
   text-align: end;
   font-style: italic;
-  border-top: solid 2px #000;
+  border-top: solid 1px #000;
   padding-top: 10px;
 }
 
@@ -89,6 +89,7 @@
   background-color: #26a7de;
   color: white;
   cursor: pointer;
+  margin: 10px 0px 10px 0px;
 }
 
 .btn:hover {
