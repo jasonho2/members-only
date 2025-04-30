@@ -1,13 +1,11 @@
-<div
-  style="
+<div class=header-bar>
 
-  "
->
-  
   <h1>Welcome to the Clubhouse</h1>
 
-  <div style="">
+  <div class="header-buttons">
+
     <%= button_to "Create Post", new_post_path, method: :get %>
+
     <% if user_signed_in? %>
       <%= button_to "Log out",
       destroy_user_session_path,
@@ -18,32 +16,30 @@
     <% else %>
       <%= button_to "Log in", new_user_session_path, method: :get %>
     <% end %>
+
   </div>
 
 </div>
 
-<div 
-  style="
+<div class="posts-wrapper">
 
-  "
->
   <% @post.all.each do |post| %>
-    <div 
-      style="
 
-      "
-    >
+    <div class="post-card">
+
       <article>
         <h3><%= post.title %></h3>
         <p><%= post.content %></p>
       </article>
 
       <% if user_signed_in? %>
-        <h4 style="">
+        <h4 class="post-author">
           <%= post.user&.email || "Anonymous" %>
         </h4>
       <% end %>
+
     </div>
+
   <% end %>
 
 </div>
