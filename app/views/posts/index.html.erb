@@ -1,2 +1,49 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<div
+  style="
+
+  "
+>
+  
+  <h1>Welcome to the Clubhouse</h1>
+
+  <div style="">
+    <%= button_to "Create Post", new_post_path, method: :get %>
+    <% if user_signed_in? %>
+      <%= button_to "Log out",
+      destroy_user_session_path,
+      method: "delete",
+      data: {
+        turbo: "false",
+      } %>
+    <% else %>
+      <%= button_to "Log in", new_user_session_path, method: :get %>
+    <% end %>
+  </div>
+
+</div>
+
+<div 
+  style="
+
+  "
+>
+  <% @post.all.each do |post| %>
+    <div 
+      style="
+
+      "
+    >
+      <article>
+        <h3><%= post.title %></h3>
+        <p><%= post.content %></p>
+      </article>
+
+      <% if user_signed_in? %>
+        <h4 style="">
+          <%= post.user&.email || "Anonymous" %>
+        </h4>
+      <% end %>
+    </div>
+  <% end %>
+
+</div>
